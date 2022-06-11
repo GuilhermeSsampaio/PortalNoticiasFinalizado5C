@@ -1,3 +1,6 @@
+//Código responsável pelas regras de negócio e pelo controle da rota noticias
+
+
 module.exports.noticias=(app,req,res)=>{
 		const connection=app.config.dbConnection();//recebemos o app por parâmetro, 
 		//então podemos recuperar o módulo dentro do app
@@ -29,7 +32,7 @@ module.exports.noticia=(app,req,res)=>{
 			});
 }
 
-module.exports.busca=(app,req,res)=>{
+module.exports.busca=(app,req,res)=>{//faz a busca pela notícia
 	const pesquisa=req.body.pesquisa;
 	const connection=app.config.dbConnection();
 	const noticiasModel=new app.app.models.NoticiasDAO(connection);

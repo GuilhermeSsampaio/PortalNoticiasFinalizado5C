@@ -6,3 +6,5 @@ module.exports.index=(app,req,res)=>{
 		res.render('home/index.ejs', {noticias:result});
 	});
 }
+
+//renderiza a tela inicial e é o controle da rota home

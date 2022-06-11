@@ -12,3 +12,5 @@ module.exports=(app)=>{
 		app.app.controllers.admin.noticias_atualizar(app,req,res);
 	});
 }
+
+//método post eh o que guarda informações
