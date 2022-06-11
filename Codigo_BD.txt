@@ -1,0 +1,17 @@
+﻿npm install// baixar a pasta node modules;
+drop database portal_noticias;// apagar banco de dados;
+create database portal_noticias;// criar banco de dados;
+use portal_noticias;// codigo para indicar qual banco de dados vou usar;
+create table noticias(id_noticia INTEGER NOT NULL PRIMARY KEY auto_increment,
+	titulo VARCHAR(100),
+	noticia TEXT,
+	data_criacao TIMESTAMP default current_timestamp
+);
+INSERT INTO noticias(titulo, noticia) VALUES ('Primeira Notícia', 'O Portal foi Lançado');
+INSERT INTO noticias(titulo, noticia) VALUES ('Segunda Notícia', 'O Portal está a todo vapor');
+
+alter table noticias add column resumo varchar(100);
+alter table noticias add column autor varchar(30);
+alter table noticias add column data_noticia date;
+
+SELECT * FROM noticias;
